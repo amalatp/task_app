@@ -57,7 +57,6 @@ class TasksCubit extends Cubit<TasksState> {
     final unsyncedTasks = await taskLocalRepository.getUnsyncedTasks();
     if (unsyncedTasks.isEmpty) {
       log("unsyncedTasks.isEmpty");
-      log("unsyncedTasks.isEmpty");
       return;
     }
     final isSynced = await taskRemoteRepository.syncTasks(
